@@ -63,8 +63,8 @@ colors = ["Red", "Blue", "Green", "Yellow", "Orange", "Purple", "Pink", "Black",
 # plt.show()
 #if number of categories is less at x-axis, use plt.bar() otherwise use plt.hbar()
 
-df=pd.read_csv("Data-Visualization/Matplotlob/datasets/batsman_season_record.csv")
-print(df.head())
+# df=pd.read_csv("Data-Visualization/Matplotlob/datasets/batsman_season_record.csv")
+# print(df.head())
 # plt.bar(df["batsman"],df["2015"],width=0.1)
 # plt.bar(np.arange(len(df))- 0.2,df["2015"],width=0.2,color="red")
 # plt.bar(np.arange(len(df)),df["2016"],width=0.2,color='blue')
@@ -92,6 +92,23 @@ np.random.seed(54)
 # print(data)
 # plt.hist(data)
 # # plt.show()
-df=pd.read_csv("Data-Visualization/Matplotlob/datasets/vk.csv")
-plt.hist(df['batsman_runs'])
+# df=pd.read_csv("Data-Visualization/Matplotlob/datasets/vk.csv")
+# plt.hist(df['batsman_runs'])
+# plt.show()
+
+
+
+"""<-------revision-------->"""
+# plt.bar(np.arange(len(df))-0.2,df['2015'],width=0.2)
+# plt.bar(np.arange(len(df)),df['2016'],width=0.2)
+# plt.bar(np.arange(len(df))+0.2,df['2017'],width=0.2)
+# plt.xticks(np.arange(len(df)),df["batsman"])
+# plt.show()'
+# plt.bar(df['batsman'],df['2015'],label="2015")
+# plt.bar(df['batsman'],df['2016'],bottom=df['2015'],label='2016')
+# plt.bar(df['batsman'],df['2017'],bottom=df["2015"]+df['2016'],label='2017')
+# plt.legend()
+# plt.show()
+df=pd.read_csv("Data-Visualization\Matplotlob\datasets\\vk.csv")
+plt.hist(df['batsman_runs'],bins=[a for a  in range(0,101,10)])
 plt.show()
